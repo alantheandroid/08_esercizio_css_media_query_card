@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -14,8 +15,11 @@ html, body {
 }
 
 .card-section {
+    position: absolute;
+    top: 0;
+    padding: 20px 0;
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
     gap: 20px;
 }
 
@@ -26,8 +30,8 @@ html, body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -53,14 +57,15 @@ html, body {
 
 @media screen and (max-width: 768px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
 }
 
 @media screen and (max-width: 375px) {
     .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        align-content: flex-start;
     }
 }
