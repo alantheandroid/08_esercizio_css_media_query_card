@@ -26,6 +26,7 @@ html, body {
 .card-container {
     height: 320px;
     width: 200px;
+    background-image: linear-gradient(135deg, darkgrey, white);
 }
 
 .grid {
@@ -55,6 +56,7 @@ html, body {
 
 /* || MEDIA QUERIES */
 
+/* tablets */
 @media screen and (max-width: 768px) {
     .grid {
         grid-template-columns: auto auto;
@@ -62,10 +64,12 @@ html, body {
     }
 }
 
+/* phones */
 @media screen and (max-width: 375px) {
     .grid {
         grid-template-columns: auto;
         grid-template-rows: auto auto auto;
         align-content: flex-start;
+        height: unset;
     }
 }
