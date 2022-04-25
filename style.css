@@ -15,24 +15,21 @@ html, body {
 }
 
 .card-section {
-    position: absolute;
-    top: 0;
-    padding: 20px 0;
-    height: 100vh;
-    width: 100vw;
+    width: 80%;
     gap: 20px;
+    aspect-ratio: 2 / 1;
 }
 
 .card-container {
-    height: 320px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     background-image: linear-gradient(135deg, darkgrey, white);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -58,18 +55,21 @@ html, body {
 
 /* tablets */
 @media screen and (max-width: 768px) {
-    .grid {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
+    .card-section {
+        aspect-ratio: 1 / 1.5;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        position: absolute;
+        top: 0;
+        padding: 5% 0;
     }
 }
 
 /* phones */
 @media screen and (max-width: 375px) {
-    .grid {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        align-content: flex-start;
-        height: unset;
+    .card-section {
+        aspect-ratio: 1 / 4;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
