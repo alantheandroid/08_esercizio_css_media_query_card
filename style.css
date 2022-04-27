@@ -37,6 +37,10 @@ html, body {
     flex-flow: column nowrap;
 }
 
+.grow {
+    flex-grow: 1;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -45,6 +49,10 @@ html, body {
     align-items: center;
     justify-content: center;
     justify-items: center;
+}
+
+.card-description strong {
+    font-size: inherit;
 }
 
 /* || CLASS RULES */
@@ -56,6 +64,7 @@ html, body {
 }
 
 .card-container {
+    justify-content: space-evenly;
     align-items: stretch;
     height: 100%;
     width: 100%;
@@ -63,23 +72,47 @@ html, body {
 }
 
 .card-header {
-    justify-content: space-between;
+    justify-content: stretch;
     align-items: center;
-    flex-grow: 1;
     width: 100%;
     padding: 0 2.5%;
     border-radius: 25px 25px 0 0;
 }
 
+.card-header h2 {
+    font-weight: 500;
+}
+
 .info-container {
-    height: 100%;
+    justify-content: stretch;
+    gap: 5%;
 }
 
 .logo-container {
-    height: 80%;
+    width: 4vw;
     aspect-ratio: 1 / 1;
     background-color: white;
+    border: 1px solid white;
     border-radius: 100%;
+}
+
+.card-logo {
+    width: 100%;
+}
+
+.card-title {
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.card-name {
+    font-size: 1.3vw;
+}
+
+.card-date {
+    font-size: 1.1vw;
+    color: white;
 }
 
 .button-container span {
@@ -87,32 +120,35 @@ html, body {
 }
 
 .picture-container {
-    display: block;
-    flex-grow: 6;
-    background-image: url(https://static.wikia.nocookie.net/undertale/images/d/dc/Lesser_Dog_battle_idle.gif/revision/latest/scale-to-width-down/106?cb=20160108180012);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 25%;
+    height: 50%;
+    padding: 3%;
+    background-color: black;
+}
+
+.card-picture {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .social-icons {
-    padding: 0 0 0 5%;
-    flex-grow: 1;
+    padding: 5%;
     justify-content: flex-start;
 }
 
 .social-icons span {
+    color: purple;
     font-size: 2vw;
 }
 
 .card-text {
-    margin: 0 5%;
-    flex-grow: 1;
+    height: 25%;
+    padding: 0 5% 5% 5%;
     align-items: flex-start;
 }
 
 .card-description {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     text-align: justify;
 }
 
@@ -129,8 +165,15 @@ html, body {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         position: absolute;
-        top: 0;
-        padding: 5% 0;
+        top: 5%;
+    }
+
+    .logo-container {
+        width: 5vw;
+    }
+
+    .button-container span {
+        font-size: 3vw;
     }
 
     .card-description {
@@ -150,7 +193,16 @@ html, body {
         grid-template-rows: 1fr 1fr 1fr;
     }
 
+    .logo-container {
+        width: 7vw;
+    }
+
+
+    .button-container span {
+        font-size: 5vw;
+    }
+
     .card-description {
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
 }
